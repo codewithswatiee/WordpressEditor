@@ -1,0 +1,286 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Add these styles for the dashboard and selection functionality */
+
+.dashboard {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-section {
+  margin-bottom: 20px;
+}
+
+.url-section {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.url-input-container {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.url-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
+}
+
+.browse-button {
+  background-color: #0073aa;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.browse-button:hover {
+  background-color: #005d87;
+}
+
+.browse-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #d54e21;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.info-message {
+  color: #0073aa;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.dashboard-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.selection-mode-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-button {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.toggle-button.active {
+  background-color: #0073aa;
+  color: white;
+  border-color: #0073aa;
+}
+
+.selection-mode-help {
+  margin-left: 10px;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.iframe-container {
+  position: relative;
+  height: 600px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.wordpress-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.placeholder {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+}
+
+.placeholder-content {
+  text-align: center;
+}
+
+.wp-logo {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+/* Selected content panel styles */
+.selected-content-panel {
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+}
+
+.selections-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.selection-item {
+  background-color: white;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.selection-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.9em;
+}
+
+.selection-type {
+  font-weight: bold;
+  color: #0073aa;
+}
+
+.selection-time {
+  color: #666;
+}
+
+.selection-content {
+  margin-bottom: 10px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.selection-context {
+  color: #666;
+}
+
+.selected-text {
+  background-color: #fff9c4;
+  padding: 1px 0;
+}
+
+.selection-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85em;
+  color: #666;
+  margin-top: 8px;
+}
+
+.post-id {
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.selection-url {
+  color: #0073aa;
+  text-decoration: none;
+}
+
+.selection-url:hover {
+  text-decoration: underline;
+}
+
+/* WordPress data section styles */
+.wp-data-button {
+  background-color: #0073aa;
+  color: white;
+  border: none;
+  padding: 3px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.85em;
+}
+
+.wp-data-button:hover {
+  background-color: #005d87;
+}
+
+.wp-data-section {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed #ccc;
+}
+
+.wp-data-header {
+  font-weight: bold;
+  color: #0073aa;
+  margin-bottom: 8px;
+  font-size: 0.9em;
+}
+
+.wp-data-content {
+  font-size: 0.9em;
+}
+
+.wp-data-field {
+  margin-bottom: 5px;
+  display: flex;
+}
+
+.wp-data-label {
+  font-weight: bold;
+  width: 80px;
+  color: #666;
+}
+
+.wp-data-value {
+  flex: 1;
+}
+
+.wp-data-link {
+  color: #0073aa;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.wp-data-link:hover {
+  text-decoration: underline;
+}
